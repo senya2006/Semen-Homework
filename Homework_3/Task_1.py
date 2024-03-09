@@ -12,5 +12,4 @@ elif operation == '/':
     result = num1 / num2
 else:
     print("Try again")
-
 print(result)
