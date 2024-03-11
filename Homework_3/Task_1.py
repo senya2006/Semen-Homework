@@ -9,7 +9,10 @@ elif operation == '-':
 elif operation == '*':
     result = num1 * num2
 elif operation == '/':
-    result = num1 / num2
+    if num2 == 0:
+        print("You can't devide by 0")
+    else:
+        result = num1 / num2
+
 else:
     print("Try again")
-print(result)
