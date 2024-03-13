@@ -16,3 +16,4 @@ elif operation == '/':
 else:
 
     print("Try again")
+print(result)
