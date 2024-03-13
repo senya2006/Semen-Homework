@@ -1,30 +1,3 @@
-# uah_usd = 0.026
-# usd_uah = 38.76
-# uah_eur = 42.41
-# eur_uah = 0.024
-#
-# currency = input("Choose the option: (UAH-USD, USD-UAH, UAH-EUR, EUR-UAH): ").strip().lower()
-#
-# if currency == "UAH-USD":
-#     amount_uah = float(input("Enter the sum you want to change in UAH: "))
-#     amount_usd = amount_uah * uah_usd
-#     print(f"Sum in USD: {amount_usd}")
-# elif currency == "USD-UAH":
-#     amount_usd = float(input("Enter the sum you want to change in USD: "))
-#     amount_uah = amount_usd * usd_uah
-#     print(f"Sum in UAH: {amount_uah}")
-# elif currency == "UAH-EUR":
-#     amount_uah = float(input("Enter the sum you want to change in UAH: "))
-#     amount_eur = amount_uah * uah_eur
-#     print(f"Sum in EUR: {amount_eur}")
-# elif currency == "EUR-UAH":
-#     amount_eur = float(input("Enter the sum you want to change in EUR: "))
-#     amount_uah = amount_eur * eur_uah
-#     print(f"Sum in UAH: {amount_uah}")
-# else:
-#     print("Try again")
-
-
 uah_usd = 0.026
 usd_uah = 38.76
 uah_eur = 0.024
