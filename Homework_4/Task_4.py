@@ -1,5 +1,5 @@
-str1 = str(input("Enter first string: "))
-str2 = str(input("Enter second string: "))
+str1 = input("Enter first string: ")
+str2 = input("Enter second string: ")
 
 if str1 == str2:
     print("The strings are equal")
