@@ -1,9 +1,4 @@
-str1 = input("Enter the string")
+actual_str = input("Enter the string: ")
+print(f'Is string {actual_str} palindrome? {actual_str == actual_str[::-1]}')
 
-str1 = str1.replace(' ','').lower()
-palindrome = str1 == ''.join(reversed(str1))
 
-if palindrome:
-    print("string is polendrome")
-else:
-    print("string is not polendrome")
