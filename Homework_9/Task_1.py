@@ -1,5 +1,3 @@
-with open('test_txt', 'r') as test_txt:
-    text = test_txt.read()
-with open('new_test.txt', 'w') as new_test:
-    new_test.write(text)
-print("Text copied successfully to new_test.txt")
+with open('test_txt.txt', 'r') as test_txt:
+    with open('new_test.txt', 'w') as new_test:
+        new_test.write(test_txt.read())
