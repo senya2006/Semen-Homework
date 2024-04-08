@@ -1,32 +1,34 @@
-def add(x, y):
-    return x + y
+def add_number(number_1: int, number_2: int) -> int:
+    return number_1 + number_2
 
-def subtract(x, y):
-    return x - y
+def substract_number(number_1: int, number_2: int) -> int:
+    return number_1 - number_2
 
-def multiply(x, y):
-    return x * y
+def multiply_number(number_1: int, number_2: int) -> int:
+    return number_1 * number_2
 
-def divide(x, y):
-    if y == 0:
-        return "You can't divide by zero!"
+def divide_number(number_1: int, number_2: int) -> float:
+    if number_2 == 0:
+        raise ZeroDivisionError("You can't division by 0")
+    return number_1 / number_2
+
+def calculator(number_1: int, number_2: int, action: str):
+    if action == "+":
+        result = add_number(number_1, number_2)
+    elif action == "-":
+        result = substract_number(number_1, number_2)
+    elif action == "*":
+        result = multiply_number(number_1, number_2)
+    elif action == "/":
+        result = divide_number(number_1, number_2)
     else:
-        return x / y
-def calculator(x, y, operation):
-    if operation == '+':
-        return add(x, y)
-    elif operation == '-':
-        return subtract(x, y)
-    elif operation == '*':
-        return multiply(x, y)
-    elif operation == '/':
-        return divide(x, y)
-    else:
-        return "Incorrect operation!"
+        raise NotImplemented('This operation is not implemented for calculator')
+    return result
 
-num1 = float(input("Enter first digit: "))
-num2 = float(input("Enter second digit: "))
-operation = input("Enter operation (+,-,*,/): ")
+number_1 = int(input('Enter first number: '))
+action = input('Enter action (you can use: +,-,/,* ): ')
+number_2 = int(input('Enter second number: '))
 
-result = calculator(num1, num2, operation)
-print(f"The result: {result}")
+result = calculator(number_1, number_2, action)
+
+print(f'Result for operation {action} for numbers {number_1, number_2} is {result}')

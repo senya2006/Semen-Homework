@@ -1,14 +1,13 @@
-def is_prime(num):
-    if not 2 <= num <= 1000:
-        return False
-    for digit in range(2, int(num ** 0.5) + 1):
-        if num % digit == 0:
+number = int(input('Enter number: '))
+
+def is_prime(number: int):
+    if number not in range(2, 1001):
+        raise ValueError(f"{number} is not a valid number. Please, try any number in range from 2 to 1000.")
+
+    for i in range(2, number + 1):
+        if number % i == 0 and i != number:
             return False
     return True
 
-num = int(input("Enter the digit that you want to check for prime number from 2 to 1000: "))
-
-if is_prime(num):
-    print(f"Number: {num} is prime")
-else:
-    print(f"Number: {num} is not prime")
+result = is_prime(number)
+print(result)
